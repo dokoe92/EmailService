@@ -26,7 +26,7 @@ public class EmailService {
         try {
             MimeMessage message = new MimeMessage(mailsession);
             message.setFrom(from);
-            message.setRecipient(Message.RecipientType.TO, new InternetAddress(to) );
+            message.setRecipient(MimeMessage.RecipientType.TO, new InternetAddress(to) );
             message.setSubject(subject);
             message.setText(body);
 
